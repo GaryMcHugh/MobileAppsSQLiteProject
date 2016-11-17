@@ -63,11 +63,13 @@ namespace EmployersSQLiteProject
             try
             {
                 var store = await Windows.Storage.ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
+                //return true if the file exists
                 return true;
             }
             catch
             {
             }
+            //return false if the file doesnt exist, so we can create the table (above and in dbHelper)
             return false;
         }
 
