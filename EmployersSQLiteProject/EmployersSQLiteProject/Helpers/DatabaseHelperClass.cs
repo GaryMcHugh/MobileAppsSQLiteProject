@@ -50,5 +50,14 @@ namespace EmployersSQLiteProject.Helpers
                 return false;
             }
         }
+ 
+        public Employees ReadEmployee(int empId)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                var existingEmployee = dbConn.Query<Employees>("select * from Employees where Id =" + empId).FirstOrDefault();
+                return existingEmployee;
+            }
+        }
     } //DatabaseHelperClass
 }
