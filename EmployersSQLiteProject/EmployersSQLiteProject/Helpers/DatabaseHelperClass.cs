@@ -68,12 +68,19 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
-        public ObservableCollection<Employees> ReadContacts()
+        //retrieve all employees to be displayed in a list
+
+        //pass the method an observable colelction of employees
+        public ObservableCollection<Employees> ReadEmployees()
         {
+            //get a connection to the database
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
+                //create a list of employees from the data in the table
                 List<Employees> myCollection = dbConn.Table<Employees>().ToList<Employees>();
+                //make an observable collection out of the list
                 ObservableCollection<Employees> EmployeesList = new ObservableCollection<Employees>(myCollection);
+                //return the observable collection
                 return EmployeesList;
             }
         }
