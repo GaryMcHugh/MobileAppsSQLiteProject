@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,8 +51,10 @@ namespace EmployersSQLiteProject.Helpers
                 return false;
             }
         }
- 
-        //get back the employee that ahs been selected from the db
+        
+        //get one employee when its selected
+
+        //get back the employee that has been selected from the db
         //pass the method the employee id that the suer wants
         public Employees ReadEmployee(int empId)
         {
@@ -62,6 +65,16 @@ namespace EmployersSQLiteProject.Helpers
                 var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + empId).FirstOrDefault();
                 return existingEmployee;
                 //reurn the employee that was returned
+            }
+        }
+
+        public ObservableCollection<Employees> ReadContacts()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                List<Employees> myCollection = dbConn.Table<Employees>().ToList<Employees>();
+                ObservableCollection<Employees> EmployeesList = new ObservableCollection<Employees>(myCollection);
+                return EmployeesList;
             }
         }
     } //DatabaseHelperClass
