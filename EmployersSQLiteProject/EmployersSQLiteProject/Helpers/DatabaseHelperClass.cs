@@ -59,7 +59,7 @@ namespace EmployersSQLiteProject.Helpers
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
                 //execute the select statement on the employee table where the id is equal to the empId selected
-                var existingEmployee = dbConn.Query<Employees>("select * from Employees where Id =" + empId).FirstOrDefault();
+                var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + empId).FirstOrDefault();
                 return existingEmployee;
                 //reurn the employee that was returned
             }
