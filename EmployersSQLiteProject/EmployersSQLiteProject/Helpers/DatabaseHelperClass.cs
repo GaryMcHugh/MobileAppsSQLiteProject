@@ -36,6 +36,7 @@ namespace EmployersSQLiteProject.Helpers
             }
         } //onCreate
 
+        //check if the file exists(for the database)
         private async Task<bool> CheckFileExists(string fileName)
         {
             try
@@ -45,6 +46,7 @@ namespace EmployersSQLiteProject.Helpers
             }
             catch
             {
+                //return false if the file doesnt exist, so we can create the table (above and in dbHelper)
                 return false;
             }
         }
