@@ -24,6 +24,7 @@ namespace EmployersSQLiteProject
     /// </summary>
     sealed partial class App : Application
     {
+        //for animations
         private TransitionCollection transitions;
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace EmployersSQLiteProject
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
         }
+        //check is the file exists(for the database)
         private async Task<bool> CheckFileExists(string fileName)
         {
             try
