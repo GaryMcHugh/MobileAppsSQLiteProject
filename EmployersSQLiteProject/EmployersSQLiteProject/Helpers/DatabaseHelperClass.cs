@@ -51,12 +51,17 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
  
+        //get back the employee that ahs been selected from the db
+        //pass the method the employee id that the suer wants
         public Employees ReadEmployee(int empId)
         {
+            //get a connection to the database
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
+                //execute the select statement on the employee table where the id is equal to the empId selected
                 var existingEmployee = dbConn.Query<Employees>("select * from Employees where Id =" + empId).FirstOrDefault();
                 return existingEmployee;
+                //reurn the employee that was returned
             }
         }
     } //DatabaseHelperClass
