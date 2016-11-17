@@ -44,17 +44,20 @@ namespace EmployersSQLiteProject
         {
             this.InitializeComponent();
 
+            //Create the table if it doesn't exist
             if (!CheckFileExists("dbEmployee.sqlite").Result)
             {
+                //create a new connection to the db path specified above
                 using (var db = new SQLiteConnection(DB_PATH))
                 {
+                    //create the table from the employees.cs in the model
                     db.CreateTable<Employees>();
                 }
             }
 
             this.Suspending += this.OnSuspending;
         }
-        //check is the file exists(for the database)
+        //check if the file exists(for the database)
         private async Task<bool> CheckFileExists(string fileName)
         {
             try
