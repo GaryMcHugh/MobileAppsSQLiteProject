@@ -34,6 +34,8 @@ namespace EmployersSQLiteProject
         /// </summary>
         ///
 
+        //specify the database path
+        //database name indicated in double quotes
         public static string DB_PATH = Path.Combine(Path.Combine(ApplicationData.Current.LocalFolder.Path, "dbEmployee.sqlite")); 
 
         public App()
