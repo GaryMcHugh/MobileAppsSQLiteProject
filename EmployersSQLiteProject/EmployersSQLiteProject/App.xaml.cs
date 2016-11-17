@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EmployersSQLiteProject.Model;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -41,6 +43,15 @@ namespace EmployersSQLiteProject
         public App()
         {
             this.InitializeComponent();
+
+            if (!CheckFileExists("dbEmployee.sqlite").Result)
+            {
+                using (var db = new SQLiteConnection(DB_PATH))
+                {
+                    db.CreateTable<Employees>();
+                }
+            }
+
             this.Suspending += this.OnSuspending;
         }
         //check is the file exists(for the database)
