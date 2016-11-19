@@ -103,9 +103,9 @@ namespace EmployersSQLiteProject.Helpers
             {
                 var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + empId).FirstOrDefault();
 
-                if (Employees != null)
+                if (existingEmployee != null)
                 {
-                    dbConn.Delete(Employees);
+                    dbConn.Delete(existingEmployee);
                 }
             }
         }
