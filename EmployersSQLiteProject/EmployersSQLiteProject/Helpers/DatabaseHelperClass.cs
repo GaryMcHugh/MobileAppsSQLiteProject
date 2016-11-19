@@ -114,13 +114,18 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
-        public void UpdateContact(Employees employee)
+        //combination of insert and read method
+        public void UpdateEmployee(Employees employee)
         {
+            //get a conenction to the db
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
+                //execute the select statement on the employee table where the id is equal to the empId selected
                 var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + employee.employeeId).FirstOrDefault();
+                //if the record is not empty
                 if (existingEmployee != null)
                 {
+                    //set the new values entered to the variables in the model
                     existingEmployee.empName = employee.empName;
                     existingEmployee.empAge = employee.empAge;
                     existingEmployee.empPhoneNumber = employee.empPhoneNumber;
@@ -128,6 +133,7 @@ namespace EmployersSQLiteProject.Helpers
                     existingEmployee.empSalary = employee.empSalary;
                     existingEmployee.CreationDate = employee.CreationDate;
 
+                    //use the SQLite update method to update the record
                     dbConn.Update(existingEmployee);
                 }
             }
