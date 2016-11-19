@@ -118,7 +118,7 @@ namespace EmployersSQLiteProject.Helpers
         {
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + employee.empId).FirstOrDefault();
+                var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + employee.employeeId).FirstOrDefault();
                 if (existingEmployee != null)
                 {
                     existingEmployee.empName = employee.empName;
