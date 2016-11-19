@@ -114,5 +114,24 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
+        public void UpdateContact(Employees employee)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + employee.empId).FirstOrDefault();
+                if (existingEmployee != null)
+                {
+                    existingEmployee.empName = employee.empName;
+                    existingEmployee.empAge = employee.empAge;
+                    existingEmployee.empPhoneNumber = employee.empPhoneNumber;
+                    existingEmployee.empEmail = employee.empEmail;
+                    existingEmployee.empSalary = employee.empSalary;
+                    existingEmployee.CreationDate = employee.CreationDate;
+
+                    dbConn.Update(existingEmployee);
+                }
+            }
+        }
+
     } //DatabaseHelperClass
 }
