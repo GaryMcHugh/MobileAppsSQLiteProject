@@ -85,11 +85,14 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
+        //pass the method a new employee from the model
         public void Insert(Employees newEmployee)
         {
+            //get a connexction to the database
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
-                    dbConn.Insert(newEmployee);
+                //use the SQLite insert method to add a new employee to the table
+                 dbConn.Insert(newEmployee);
             }
         }
 
