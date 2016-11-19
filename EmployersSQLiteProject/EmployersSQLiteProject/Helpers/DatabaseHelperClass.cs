@@ -139,5 +139,17 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
+        public void DeleteAllEmployees()
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                dbConn.DropTable<Employees>();
+                dbConn.CreateTable<Employees>();
+
+                dbConn.Dispose();
+                dbConn.Close();
+            }
+        }
+
     } //DatabaseHelperClass
 }
