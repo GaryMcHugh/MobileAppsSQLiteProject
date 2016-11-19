@@ -99,12 +99,16 @@ namespace EmployersSQLiteProject.Helpers
         //same as read except check for not being null
         public void DeleteEmployee(int empId)
         {
+            //get connection
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
+                //execute the select statement on the employee table where the id is equal to the empId selected
                 var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + empId).FirstOrDefault();
 
+                //check that the record is not null
                 if (existingEmployee != null)
                 {
+                    //use the SQLite method to delete the employee
                     dbConn.Delete(existingEmployee);
                 }
             }
