@@ -84,5 +84,14 @@ namespace EmployersSQLiteProject.Helpers
                 return EmployeesList;
             }
         }
+
+        public void Insert(Employees newEmployee)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                    dbConn.Insert(newEmployee);
+            }
+        }
+
     } //DatabaseHelperClass
 }
