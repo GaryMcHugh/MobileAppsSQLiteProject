@@ -139,14 +139,20 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
+        //remove all records
         public void DeleteAllEmployees()
         {
+            //get a connection
             using (var dbConn = new SQLiteConnection(App.DB_PATH))
             {
+                //drop the table
                 dbConn.DropTable<Employees>();
+                //create a new one so that the user can add more employees
                 dbConn.CreateTable<Employees>();
 
+                //drop the connection
                 dbConn.Dispose();
+                //clsoe the connection
                 dbConn.Close();
             }
         }
