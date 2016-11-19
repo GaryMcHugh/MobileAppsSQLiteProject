@@ -96,5 +96,19 @@ namespace EmployersSQLiteProject.Helpers
             }
         }
 
+        //same as read except check for not being null
+        public void DeleteEmployee(int empId)
+        {
+            using (var dbConn = new SQLiteConnection(App.DB_PATH))
+            {
+                var existingEmployee = dbConn.Query<Employees>("select * from Employees where employeeId =" + empId).FirstOrDefault();
+
+                if (Employees != null)
+                {
+                    dbConn.Delete(Employees);
+                }
+            }
+        }
+
     } //DatabaseHelperClass
 }
