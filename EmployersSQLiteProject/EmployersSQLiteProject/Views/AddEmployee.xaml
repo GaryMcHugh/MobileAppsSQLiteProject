@@ -22,9 +22,6 @@
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel >
-                <TextBlock FontSize="25" Text="Name"/>
-                <TextBox Name="EmailtxtBx"/>
-                <Button HorizontalAlignment="Stretch" Content="Add Contact" Click="AddContact_Click"/>
             </StackPanel>
         </Grid>
     </Grid>
