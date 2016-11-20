@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployersSQLiteProject.Helpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace EmployersSQLiteProject.Views
         public AddEmployee()
         {
             this.InitializeComponent();
+        }
+
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            DatabaseHelperClass Db_Helper = new DatabaseHelperClass();//Creating object for DatabaseHelperClass.cs from ViewModel/DatabaseHelperClass.cs 
+
         }
     }
 }
