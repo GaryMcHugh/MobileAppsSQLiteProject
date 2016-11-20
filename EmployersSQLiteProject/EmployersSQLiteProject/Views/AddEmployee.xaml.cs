@@ -32,15 +32,18 @@ namespace EmployersSQLiteProject.Views
 
         private async void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            DatabaseHelperClass Db_Helper = new DatabaseHelperClass();
+            DatabaseHelperClass Db_Helper = new DatabaseHelperClass();//Create an object for DatabaseHelperClass.cs from ViewModel/DatabaseHelperClass.cs 
+            //if all fields have been filled in
             if (NametxtBx.Text != "" & AgetxtBx.Text != "" & PhoneNumbertxtBx.Text != "" & EmailtxtBx.Text != "" & SalarytxtBx.Text != "")
             {
+                //insert them into the database using the db Helper class
                 Db_Helper.Insert(new Employees(NametxtBx.Text, AgetxtBx.Text, PhoneNumbertxtBx.Text, EmailtxtBx.Text, SalarytxtBx.Text));
+                //after adding Employees bring the user to the listbox page to see their changes
                 Frame.Navigate(typeof(ReadEmployeesList));
             }
             else
             {
-                MessageDialog messageDialog = new MessageDialog("Please fill in all fields"); 
+                MessageDialog messageDialog = new MessageDialog("Please fill in all fields");//Text should not be empty 
                 await messageDialog.ShowAsync();
             }
         }
