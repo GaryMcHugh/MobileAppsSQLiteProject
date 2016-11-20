@@ -19,6 +19,11 @@
         <StackPanel Grid.Row="0" Margin="0,17,0,28" HorizontalAlignment="Center">
             <TextBlock FontSize="25" Text="Add Employee" Margin="0,-7,0,0" />
         </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <StackPanel >
+            </StackPanel>
+        </Grid>
     </Grid>
 
 </Page>
