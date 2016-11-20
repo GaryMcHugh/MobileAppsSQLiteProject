@@ -1,4 +1,5 @@
 ﻿using EmployersSQLiteProject.Helpers;
+using EmployersSQLiteProject.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,10 +30,19 @@ namespace EmployersSQLiteProject.Views
             this.InitializeComponent();
         }
 
-        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        private async void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            DatabaseHelperClass Db_Helper = new DatabaseHelperClass();//Creating object for DatabaseHelperClass.cs from ViewModel/DatabaseHelperClass.cs 
-
+            DatabaseHelperClass Db_Helper = new DatabaseHelperClass();
+            if (NametxtBx.Text != "" & AgetxtBx.Text != "" & PhoneNumbertxtBx.Text != "" & EmailtxtBx.Text != "" & SalarytxtBx.Text != "")
+            {
+                Db_Helper.Insert(new Employees(NametxtBx.Text, AgetxtBx.Text, PhoneNumbertxtBx.Text, EmailtxtBx.Text, SalarytxtBx.Text));
+                Frame.Navigate(typeof(ReadEmployeesList));
+            }
+            else
+            {
+                MessageDialog messageDialog = new MessageDialog("Please fill in all fields"); 
+                await messageDialog.ShowAsync();
+            }
         }
     }
 }
