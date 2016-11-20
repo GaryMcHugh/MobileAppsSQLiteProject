@@ -22,6 +22,9 @@
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel >
+                <TextBlock FontSize="25" Text="Employee Name"/>
+                <TextBox Name="NametxtBx"/>
+                <Button HorizontalAlignment="Stretch" Content="Add Employee" Click="AddEmployee_Click"/>
             </StackPanel>
         </Grid>
     </Grid>
