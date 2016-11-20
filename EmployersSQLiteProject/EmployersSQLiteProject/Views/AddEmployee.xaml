@@ -24,6 +24,19 @@
             <StackPanel >
                 <TextBlock FontSize="25" Text="Employee Name"/>
                 <TextBox Name="NametxtBx"/>
+                
+                <TextBlock FontSize="25" Text="Employee Age"/>
+                <TextBox Name="AgetxtBx"/>
+                
+                <TextBlock FontSize="25" Text="Employee Phone No"/>
+                <TextBox Name="PhoneNumbertxtBx"/>
+                
+                <TextBlock FontSize="25" Text="Employee Email"/>
+                <TextBox Name="EmailtxtBx"/>
+                
+                <TextBlock FontSize="25" Text="Employee Salary"/>
+                <TextBox Name="SalarytxtBx"/>
+                
                 <Button HorizontalAlignment="Stretch" Content="Add Employee" Click="AddEmployee_Click"/>
             </StackPanel>
         </Grid>
