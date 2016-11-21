@@ -27,10 +27,11 @@
             </Grid.RowDefinitions>
 
             <StackPanel Width="400" Orientation="Horizontal" Grid.Row="0">
-                <Button  Margin="120,0,0,0" Content="Add Employee" Click="AddEmployee_Click"/>
+                <Button  Margin="20,0,0,0" Content="Add Employee"  Click="AddEmployee_Click"/>
+                <Button Name="Btn_Delete" Margin="100,0,0,0" Content="DeleteAll" Click="DeleteAll_Click"/>
             </StackPanel>
 
-            <ListBox Background="Transparent" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
+            <ListBox Background="Black" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="350" >
@@ -45,8 +46,8 @@
                                     <TextBlock Grid.Row="0" Text=">" FontSize="28"  HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White"/>
                                     <TextBlock Margin="5,0,0,0" Grid.Row="1" x:Name="PhoneNumbertxtBx"  TextWrapping="Wrap" Foreground="White" FontSize="18" Text="{Binding empPhoneNumber}" />
                                     <TextBlock Margin="5,20,0,0" Grid.Row="1" x:Name="EmailtxtBx"  TextWrapping="Wrap" Foreground="White" FontSize="18" Text="{Binding empEmail}" />
-                                    <TextBlock Margin="5,20,0,0" Grid.Row="1" x:Name="SalarytxtBx"  TextWrapping="Wrap" Foreground="White" FontSize="18" Text="{Binding empSalary}" />
                                     <TextBlock HorizontalAlignment="Right" Margin="0,0,35,0" Grid.Row="3" x:Name="CreateddateTxt" Foreground="White" FontSize="18" TextWrapping="Wrap" Text="{Binding CreationDate}" />
+                                    <TextBlock HorizontalAlignment="Right" Margin="20,20,0,0" Grid.Row="6" x:Name="empSalarytxtBx" Foreground="White" FontSize="18" TextWrapping="Wrap" Text="{Binding empSalary}" />
                                 </Grid>
                             </Border>
                         </Grid>
