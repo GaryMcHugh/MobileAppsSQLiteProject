@@ -29,6 +29,13 @@
             <StackPanel Width="400" Orientation="Horizontal" Grid.Row="0">
                 <Button  Margin="120,0,0,0" Content="Add Employee" Click="AddEmployee_Click"/>
             </StackPanel>
+
+            <ListBox Background="Transparent" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
         </Grid>
 
     </Grid>
