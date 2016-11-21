@@ -54,11 +54,14 @@ namespace EmployersSQLiteProject.Views
 
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
+            //navigate to the AddEmployees page when this button is clicked
             Frame.Navigate(typeof(AddEmployee));
         }
 
         private async void DeleteAll_Click(object sender, RoutedEventArgs e)
         {
+            //ask the user if they are sure using dialog boxes
+            //use async and await as dialogue boxs take a while to load
             var dialog = new MessageDialog("Are you sure you want to remove all your data ?");
             dialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(Command)));
             dialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(Command)));
@@ -66,12 +69,17 @@ namespace EmployersSQLiteProject.Views
         }
         private void Command(IUICommand command)
         {
+            //if they answered yes
             if (command.Label.Equals("Yes"))
             {
                 DatabaseHelperClass Db_Helper = new DatabaseHelperClass();
+                //delete all employees from the databse
                 Db_Helper.DeleteAllEmployees();
+                //clear the view so the user knows the employees were deleted
                 DB_EmployeeList.Clear();
+                //did=sabel the delete buton as there are not employees to delete
                 Btn_Delete.IsEnabled = false;
+                //set the listbox equal to the empty list
                 listBoxobj.ItemsSource = DB_EmployeeList;
             }
         }
