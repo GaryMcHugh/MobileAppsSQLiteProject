@@ -25,6 +25,10 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+
+            <StackPanel Width="400" Orientation="Horizontal" Grid.Row="0">
+                <Button  Margin="120,0,0,0" Content="Add Employee" Click="AddEmployee_Click"/>
+            </StackPanel>
         </Grid>
 
     </Grid>
