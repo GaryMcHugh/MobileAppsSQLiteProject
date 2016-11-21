@@ -1,5 +1,8 @@
-﻿using System;
+﻿using EmployersSQLiteProject.Helpers;
+using EmployersSQLiteProject.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +28,11 @@ namespace EmployersSQLiteProject.Views
         public ReadEmployeesList()
         {
             this.InitializeComponent();
+        }
+
+        private void AddContact_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddEmployee));
         }
     }
 }
