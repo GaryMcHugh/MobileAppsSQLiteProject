@@ -30,9 +30,19 @@
                 <Button  Margin="120,0,0,0" Content="Add Employee" Click="AddEmployee_Click"/>
             </StackPanel>
 
-            <ListBox Background="Transparent" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
+            <ListBox Background="Black" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
+                        <Grid Width="350" >
+                            <Border Margin="5" BorderBrush="White" BorderThickness="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                </Grid>
+                            </Border>
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
