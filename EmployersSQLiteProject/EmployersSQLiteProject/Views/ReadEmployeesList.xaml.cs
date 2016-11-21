@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,6 +42,11 @@ namespace EmployersSQLiteProject.Views
             ReadAllEmployeesList dbEmployees = new ReadAllEmployeesList();
             //get all employees using the list and put them in the observable collection
             DB_EmployeeList = dbEmployees.GetAllEmployees();
+
+            if (DB_EmployeeList.Count > 0)
+            {
+                Btn_Delete.IsEnabled = true;
+            }
             //bind db record to list box and display the latest record
             //(new records weill be put at the end... so by ordering by desending we get the latest record first)
             listBoxobj.ItemsSource = DB_EmployeeList.OrderByDescending(i => i.employeeId).ToList();
@@ -49,6 +55,14 @@ namespace EmployersSQLiteProject.Views
         private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AddEmployee));
+        }
+
+        private async void DeleteAll_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new MessageDialog("Are you sure you want to remove all your data ?");
+            dialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(Command)));
+            dialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(Command)));
+            await dialog.ShowAsync();
         }
 
         private void listBoxobj_SelectionChanged(object sender, SelectionChangedEventArgs e)
