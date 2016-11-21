@@ -14,6 +14,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="0,17,0,28" HorizontalAlignment="Center">
+            <TextBlock Text="List of Employees" Margin="0,-7,0,0" FontSize="30"/>
+        </StackPanel>
+        
     </Grid>
 
 </Page>
