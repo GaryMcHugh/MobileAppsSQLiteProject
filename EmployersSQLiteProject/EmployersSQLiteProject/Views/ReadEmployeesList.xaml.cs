@@ -46,9 +46,14 @@ namespace EmployersSQLiteProject.Views
             listBoxobj.ItemsSource = DB_EmployeeList.OrderByDescending(i => i.employeeId).ToList();
         }
 
-        private void AddContact_Click(object sender, RoutedEventArgs e)
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AddEmployee));
+        }
+
+        private void listBoxobj_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
