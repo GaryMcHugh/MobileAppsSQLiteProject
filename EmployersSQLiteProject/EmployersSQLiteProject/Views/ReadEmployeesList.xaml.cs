@@ -25,18 +25,24 @@ namespace EmployersSQLiteProject.Views
     /// </summary>
     public sealed partial class ReadEmployeesList : Page
     {
+        //create an observable collection to take the list and display it
         ObservableCollection<Employees> DB_EmployeeList = new ObservableCollection<Employees>();
 
         public ReadEmployeesList()
         {
             this.InitializeComponent();
+            //start the load method when this class is initialised
             this.Loaded += ReadEmployeesList_Loaded;
         }
 
         private void ReadEmployeesList_Loaded(object sender, RoutedEventArgs e)
         {
+            //create a list to get the meployees from the db
             ReadAllEmployeesList dbEmployees = new ReadAllEmployeesList();
+            //get all employees using the list and put them in the observable collection
             DB_EmployeeList = dbEmployees.GetAllEmployees();
+            //bind db record to list box and display the latest record
+            //(new records weill be put at the end... so by ordering by desending we get the latest record first)
             listBoxobj.ItemsSource = DB_EmployeeList.OrderByDescending(i => i.employeeId).ToList();
         }
 
