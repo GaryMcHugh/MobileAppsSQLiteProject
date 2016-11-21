@@ -25,9 +25,19 @@ namespace EmployersSQLiteProject.Views
     /// </summary>
     public sealed partial class ReadEmployeesList : Page
     {
+        ObservableCollection<Employees> DB_EmployeeList = new ObservableCollection<Employees>();
+
         public ReadEmployeesList()
         {
             this.InitializeComponent();
+            this.Loaded += ReadEmployeesList_Loaded;
+        }
+
+        private void ReadEmployeesList_Loaded(object sender, RoutedEventArgs e)
+        {
+            ReadAllEmployeesList dbEmployees = new ReadAllEmployeesList();
+            DB_EmployeeList = dbEmployees.GetAllEmployees();
+            listBoxobj.ItemsSource = DB_EmployeeList.OrderByDescending(i => i.employeeId).ToList();
         }
 
         private void AddContact_Click(object sender, RoutedEventArgs e)
