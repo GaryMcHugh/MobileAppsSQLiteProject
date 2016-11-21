@@ -64,6 +64,17 @@ namespace EmployersSQLiteProject.Views
             dialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(Command)));
             await dialog.ShowAsync();
         }
+        private void Command(IUICommand command)
+        {
+            if (command.Label.Equals("Yes"))
+            {
+                DatabaseHelperClass Db_Helper = new DatabaseHelperClass();
+                Db_Helper.DeleteAllEmployees();
+                DB_EmployeeList.Clear();
+                Btn_Delete.IsEnabled = false;
+                listBoxobj.ItemsSource = DB_EmployeeList;
+            }
+        }
 
         private void listBoxobj_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
