@@ -86,7 +86,16 @@ namespace EmployersSQLiteProject.Views
 
         private void listBoxobj_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int SelectedEmployeeID = 0;
+            //make sure that an item is selected
+            if (listBoxobj.SelectedIndex != -1)
+            {
+                //get the selected listbox items employeeId
+                Employees listitem = listBoxobj.SelectedItem as Employees;
+                //show the delete update page with the selected employeeID
+                Frame.Navigate(typeof(DeleteUpdateEmployees), SelectedEmployeeID = listitem.employeeId);
 
+            }
         }
     }
 }

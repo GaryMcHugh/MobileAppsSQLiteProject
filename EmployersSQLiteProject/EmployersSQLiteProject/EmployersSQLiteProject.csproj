@@ -110,6 +110,9 @@
     <Compile Include="Views\DeleteUpdateEmployees.xaml.cs">
       <DependentUpon>DeleteUpdateEmployees.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ReadEmployeesList.xaml.cs">
       <DependentUpon>ReadEmployeesList.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\DeleteUpdateEmployees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
