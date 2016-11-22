@@ -97,5 +97,20 @@ namespace EmployersSQLiteProject.Views
 
             }
         }
+
+        private void AddEmp_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddEmployee));
+        }
+
+        private async void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            //ask the user if they are sure using dialog boxes
+            //use async and await as dialogue boxs take a while to load
+            var dialog = new MessageDialog("Are you sure you want to remove all your data ?");
+            dialog.Commands.Add(new UICommand("No", new UICommandInvokedHandler(Command)));
+            dialog.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(Command)));
+            await dialog.ShowAsync();
+        }
     }
 }

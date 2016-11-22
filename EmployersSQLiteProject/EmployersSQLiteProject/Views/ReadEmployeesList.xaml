@@ -7,6 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Name="AddEmp" Icon="Add" Label="Add Employee" Click="AddEmp_Click"/>
+            <AppBarButton Name="Delete" Icon="Clear" Label="Delete All Employees" Click="Delete_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -31,7 +40,7 @@
                 <Button Name="Btn_Delete" Margin="100,0,0,0" Content="DeleteAll" Click="DeleteAll_Click"/>
             </StackPanel>
 
-            <ListBox Background="Black" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
+            <ListBox Background="Gray" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="350" >

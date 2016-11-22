@@ -36,8 +36,8 @@
                 
                 <TextBlock FontSize="25" Text="Employee Salary"/>
                 <TextBox Name="SalarytxtBx"/>
-                
-                <Button HorizontalAlignment="Stretch" Content="Add Employee" Click="AddEmployee_Click"/>
+
+                <Button HorizontalAlignment="Stretch" Content="Add Employee" Margin="0,10,0,0" Click="AddEmployee_Click"/>
             </StackPanel>
         </Grid>
     </Grid>
