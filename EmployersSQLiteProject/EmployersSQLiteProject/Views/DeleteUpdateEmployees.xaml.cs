@@ -50,13 +50,16 @@ namespace EmployersSQLiteProject.Views
 
         private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
         {
+            //set the new textbox values to currentEmployee
             currentEmployee.empName = NametxtBx.Text;
             currentEmployee.empAge = AgetxtBx.Text;
             currentEmployee.empPhoneNumber = PhoneNumbertxtBx.Text;
             currentEmployee.empEmail = EmailtxtBx.Text;
             currentEmployee.empSalary = SalarytxtBx.Text;
 
+            //Update the db to the new values the user entered
             Db_Helper.UpdateEmployee(currentEmployee);
+            //navigate to the ListBox view so th euser can see their changes
             Frame.Navigate(typeof(ReadEmployeesList));
         }
         private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
