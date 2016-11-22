@@ -33,6 +33,11 @@ namespace EmployersSQLiteProject.Views
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+        }
+
         private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
         {
 
