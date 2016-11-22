@@ -69,5 +69,10 @@ namespace EmployersSQLiteProject.Views
             //navigate to the ListBox view so the user can see their changes
             Frame.Navigate(typeof(ReadEmployeesList));
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ReadEmployeesList));
+        }
     }
 }

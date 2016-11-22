@@ -98,6 +98,8 @@ namespace EmployersSQLiteProject.Views
             }
         }
 
+        //provides the user with an alternative way to add and delete
+
         private void AddEmp_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AddEmployee));
