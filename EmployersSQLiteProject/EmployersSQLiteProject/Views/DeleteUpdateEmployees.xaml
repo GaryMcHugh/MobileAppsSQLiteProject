@@ -17,7 +17,7 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Delete/Update Employee" FontSize="28" Margin="0,-7,0,0" HorizontalAlignment="Center"/>
+            <TextBlock Text="Delete/Update Employee" FontSize="28" Margin="0,-7,15,0" HorizontalAlignment="Center"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -27,6 +27,13 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Name="EditView">
+                <TextBox Name="NametxtBx" FontSize="25" Margin="0,0,0,15"/>
+                <TextBox Name="AgetxtBx" FontSize="25" Margin="0,0,0,15"/>
+                <TextBox Name="PhoneNumbertxtBx" FontSize="25" Margin="0,0,0,15"/>
+                <TextBox Name="EmailtxtBx" FontSize="25" Margin="0,0,0,15"/>
+                <TextBox Name="SalarytxtBx" FontSize="25" Margin="0,0,0,15"/>
+            </StackPanel>
         </Grid>
 
     </Grid>
