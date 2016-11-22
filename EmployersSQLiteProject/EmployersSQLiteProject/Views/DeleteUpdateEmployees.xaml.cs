@@ -35,9 +35,12 @@ namespace EmployersSQLiteProject.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            //get the selected employee Id so it can be used to load other fields
             Selected_EmployeeId = int.Parse(e.Parameter.ToString());
+            //call the readEmployee method on the selected employee
             currentEmployee = Db_Helper.ReadEmployee(Selected_EmployeeId);
 
+            //set the textbox's to the values retrieved from ReadEmployee
             NametxtBx.Text = currentEmployee.empName;
             AgetxtBx.Text = currentEmployee.empAge;
             PhoneNumbertxtBx.Text = currentEmployee.empPhoneNumber;
