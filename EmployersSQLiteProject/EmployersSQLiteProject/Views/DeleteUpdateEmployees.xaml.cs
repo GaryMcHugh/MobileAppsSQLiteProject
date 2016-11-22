@@ -50,7 +50,14 @@ namespace EmployersSQLiteProject.Views
 
         private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
         {
+            currentEmployee.empName = NametxtBx.Text;
+            currentEmployee.empAge = AgetxtBx.Text;
+            currentEmployee.empPhoneNumber = PhoneNumbertxtBx.Text;
+            currentEmployee.empEmail = EmailtxtBx.Text;
+            currentEmployee.empSalary = SalarytxtBx.Text;
 
+            Db_Helper.UpdateEmployee(currentEmployee);
+            Frame.Navigate(typeof(ReadEmployeesList));
         }
         private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
