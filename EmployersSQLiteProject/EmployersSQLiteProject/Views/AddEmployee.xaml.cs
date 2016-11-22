@@ -47,5 +47,10 @@ namespace EmployersSQLiteProject.Views
                 await messageDialog.ShowAsync();
             }
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ReadEmployeesList));
+        }
     }
 }

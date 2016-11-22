@@ -46,6 +46,7 @@ namespace EmployersSQLiteProject.Views
             if (DB_EmployeeList.Count > 0)
             {
                 Btn_Delete.IsEnabled = true;
+                Delete.IsEnabled = true;
             }
             //bind db record to list box and display the latest record
             //(new records weill be put at the end... so by ordering by desending we get the latest record first)
@@ -79,6 +80,7 @@ namespace EmployersSQLiteProject.Views
                 DB_EmployeeList.Clear();
                 //did=sabel the delete buton as there are not employees to delete
                 Btn_Delete.IsEnabled = false;
+                Delete.IsEnabled = false;
                 //set the listbox equal to the empty list
                 listBoxobj.ItemsSource = DB_EmployeeList;
             }
