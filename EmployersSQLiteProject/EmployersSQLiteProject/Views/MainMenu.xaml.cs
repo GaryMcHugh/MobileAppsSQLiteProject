@@ -26,5 +26,15 @@ namespace EmployersSQLiteProject.Views
         {
             this.InitializeComponent();
         }
+
+        private void AddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AddEmployee));
+        }
+
+        private void ViewEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ReadEmployeesList));
+        }
     }
 }
