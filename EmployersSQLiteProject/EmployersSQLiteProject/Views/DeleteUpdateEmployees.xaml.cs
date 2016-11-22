@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EmployersSQLiteProject.Helpers;
+using EmployersSQLiteProject.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +24,22 @@ namespace EmployersSQLiteProject.Views
     /// </summary>
     public sealed partial class DeleteUpdateEmployees : Page
     {
+        int Selected_EmployeeId = 0;
+        DatabaseHelperClass Db_Helper = new DatabaseHelperClass();
+        Employees currentEmployee = new Employees();
+
         public DeleteUpdateEmployees()
         {
             this.InitializeComponent();
+        }
+
+        private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
