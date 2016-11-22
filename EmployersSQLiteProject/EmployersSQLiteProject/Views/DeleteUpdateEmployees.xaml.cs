@@ -35,7 +35,14 @@ namespace EmployersSQLiteProject.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Selected_EmployeeId = int.Parse(e.Parameter.ToString());
+            currentEmployee = Db_Helper.ReadEmployee(Selected_EmployeeId);
 
+            NametxtBx.Text = currentEmployee.empName;
+            AgetxtBx.Text = currentEmployee.empAge;
+            PhoneNumbertxtBx.Text = currentEmployee.empPhoneNumber;
+            EmailtxtBx.Text = currentEmployee.empEmail;
+            SalarytxtBx.Text = currentEmployee.empSalary;
         }
 
         private void UpdateEmployee_Click(object sender, RoutedEventArgs e)
