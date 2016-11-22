@@ -64,7 +64,8 @@ namespace EmployersSQLiteProject.Views
         }
         private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
-
+            Db_Helper.DeleteEmployee(Selected_EmployeeId);
+            Frame.Navigate(typeof(ReadEmployeesList));
         }
     }
 }
