@@ -59,12 +59,14 @@ namespace EmployersSQLiteProject.Views
 
             //Update the db to the new values the user entered
             Db_Helper.UpdateEmployee(currentEmployee);
-            //navigate to the ListBox view so th euser can see their changes
+            //navigate to the ListBox view so the user can see their changes
             Frame.Navigate(typeof(ReadEmployeesList));
         }
         private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
+            //Delete the selected employee from the db
             Db_Helper.DeleteEmployee(Selected_EmployeeId);
+            //navigate to the ListBox view so the user can see their changes
             Frame.Navigate(typeof(ReadEmployeesList));
         }
     }
