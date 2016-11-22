@@ -36,8 +36,8 @@
             </Grid.RowDefinitions>
 
             <StackPanel Width="400" Orientation="Horizontal" Grid.Row="0">
-                <Button  Margin="20,0,0,0" Content="Add Employee"  Click="AddEmployee_Click" Visibility="Collapsed"/>
-                <Button Name="Btn_Delete" Margin="100,0,0,0" Content="DeleteAll" Click="DeleteAll_Click" Visibility="Collapsed"/>
+                <Button  Margin="20,0,0,0" Content="Add Employee"  Click="AddEmployee_Click"/>
+                <Button Name="Btn_Delete" Margin="100,0,0,0" Content="DeleteAll" Click="DeleteAll_Click"/>
             </StackPanel>
 
             <ListBox Background="Gray" Margin="6" Height="auto" BorderThickness="2" MaxHeight="580" Grid.Row="1" x:Name="listBoxobj" SelectionChanged="listBoxobj_SelectionChanged">
