@@ -70,8 +70,10 @@ namespace EmployersSQLiteProject.Views
             Frame.Navigate(typeof(ReadEmployeesList));
         }
 
+        //replaces the home button
         private void Home_Click(object sender, RoutedEventArgs e)
         {
+            //bring the user back to the home page
             Frame.Navigate(typeof(ReadEmployeesList));
         }
     }

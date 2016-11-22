@@ -48,8 +48,10 @@ namespace EmployersSQLiteProject.Views
             }
         }
 
+        //replaces abck button
         private void Home_Click(object sender, RoutedEventArgs e)
         {
+            //bring user back to the main page
             Frame.Navigate(typeof(ReadEmployeesList));
         }
     }

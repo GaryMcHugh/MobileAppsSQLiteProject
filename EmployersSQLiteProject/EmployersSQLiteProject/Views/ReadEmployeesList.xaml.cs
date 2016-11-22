@@ -45,6 +45,7 @@ namespace EmployersSQLiteProject.Views
 
             if (DB_EmployeeList.Count > 0)
             {
+                //enable buttons when there is more than one item
                 Btn_Delete.IsEnabled = true;
                 Delete.IsEnabled = true;
             }
@@ -78,7 +79,7 @@ namespace EmployersSQLiteProject.Views
                 Db_Helper.DeleteAllEmployees();
                 //clear the view so the user knows the employees were deleted
                 DB_EmployeeList.Clear();
-                //did=sabel the delete buton as there are not employees to delete
+                //disable the delete buttons as there are not employees to delete
                 Btn_Delete.IsEnabled = false;
                 Delete.IsEnabled = false;
                 //set the listbox equal to the empty list
@@ -104,6 +105,7 @@ namespace EmployersSQLiteProject.Views
 
         private void AddEmp_Click(object sender, RoutedEventArgs e)
         {
+            //navigate to Add employees
             Frame.Navigate(typeof(AddEmployee));
         }
 
