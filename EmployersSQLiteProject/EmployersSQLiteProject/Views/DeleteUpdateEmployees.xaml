@@ -44,7 +44,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="2">
-                <Button Content="Update" HorizontalAlignment="Stretch" Margin="0,0,0,5" Click="UpdateEmployee_Click"/>
+                <Button Content="Update" HorizontalAlignment="Stretch" Margin="0,0,0,10" Click="UpdateEmployee_Click"/>
                 <Button Content="Delete" HorizontalAlignment="Stretch" Click="DeleteEmployee_Click"/>
             </StackPanel>
         </Grid>
