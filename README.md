@@ -9,6 +9,10 @@ This project uses various things I learned from the labs such as MVVM, SQLite, O
 The files 'SQLite.cs' and 'SQLiteAsync.cs' are publicly available files that I used to create this project. I found them at the following link:  
 [SQLite Files](https://github.com/praeclarum/sqlite-net)
 
+##How to use the Application
+The following page will be displayed when the user starts the application:
+<img src="Images/Home.png" alt="Home" style="width: 200px height="700""/>
+
 ## Database
 I designed the database to contain anything that an employer may want to store about their employee’s, such as name, age and contact details.
 I used a primary key of employeeId as there is a chance that two people in the company may have the same name meaning that name could not be the primary key. 
