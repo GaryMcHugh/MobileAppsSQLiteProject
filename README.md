@@ -58,7 +58,7 @@ The user can then update the employee's details in the text box's and click the 
 <img src="Images/DelUpdate.png" alt="Go Home" width="450" height="600"/>
 
 ## User Experience
-I have designed this application with the user's experience in mnd, this is demonstrated through error handling on the Add Employee page as shown:
+I have designed this application with the user's experience in mind, this is demonstrated through error handling on the Add Employee page as shown:
 
 
 <img src="Images/Error.png" alt="Error Handling"/>
@@ -67,7 +67,7 @@ I have designed this application with the user's experience in mnd, this is demo
 As well as the delete all buttons being disabled when there are no emplyees in the database to delete:
 
 
-<img src="Disabled/Error.png" alt="Disabled"/>
+<img src="Images/disabled.png" alt="Disabled"/>
 
 
 ## Database
