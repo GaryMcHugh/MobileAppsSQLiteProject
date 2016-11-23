@@ -64,10 +64,10 @@ I have designed this application with the user's experience in mind, this is dem
 <img src="Images/Error.png" alt="Error Handling"/>
 
 
-As well as the delete all buttons being disabled when there are no emplyees in the database to delete:
+As well as the delete all buttons being disabled when there are no employee's in the database to delete:
 
 
-<img src="Images/disabled.png" alt="Disabled"/>
+<img src="Images/disabled.png" alt="Disabled" width="450" height="600"/>
 
 
 ## Database
