@@ -51,6 +51,7 @@ namespace EmployersSQLiteProject.Views
             }
             //bind db record to list box and display the latest record
             //(new records weill be put at the end... so by ordering by desending we get the latest record first)
+            //use of a lambda expression
             listBoxobj.ItemsSource = DB_EmployeeList.OrderByDescending(i => i.employeeId).ToList();
         }
 
