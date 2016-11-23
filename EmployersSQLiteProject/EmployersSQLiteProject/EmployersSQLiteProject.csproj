@@ -95,8 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\DatabaseHelperClass.cs" />
-    <Compile Include="Helpers\ReadAllEmployeesList.cs" />
+    <Compile Include="ViewModelHelpers\DatabaseHelperClass.cs" />
+    <Compile Include="ViewModelHelpers\ReadAllEmployeesList.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
