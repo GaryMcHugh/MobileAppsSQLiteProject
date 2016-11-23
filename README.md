@@ -7,4 +7,4 @@ contact details and salaries. An easy to use interface allows the user to easily
 I have used the MVVM structure in this project to separate out my classes. The use of a command bar allows for easy navigation to and from the home page. 
 This project uses various things I learned from the labs such as MVVM, SQLite, Observable Collections and Lambda expressions. 
 The files 'SQLite.cs' and 'SQLiteAsync.cs' are publicly available files that I used to create this project. I found them at the following link:
-![alt text](https://github.com/praeclarum/sqlite-net/blob/master/src/SQLite.cs "SQLite files")
+[SQLite Files](https://github.com/praeclarum/sqlite-net)
