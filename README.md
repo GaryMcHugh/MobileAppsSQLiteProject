@@ -11,7 +11,7 @@ The files 'SQLite.cs' and 'SQLiteAsync.cs' are publicly available files that I u
 
 ##How to use the Application
 The following page will be displayed when the user starts the application:
-<img src="Images/Home.png" alt="Home" width="250" height="600"/>
+<img src="Images/Home.png" alt="Home" width="350" height="600"/>
 
 ## Database
 I designed the database to contain anything that an employer may want to store about their employee’s, such as name, age and contact details.
