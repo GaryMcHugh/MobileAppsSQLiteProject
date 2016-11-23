@@ -11,7 +11,21 @@ The files 'SQLite.cs' and 'SQLiteAsync.cs' are publicly available files that I u
 
 ##How to use the Application
 The following page will be displayed when the user starts the application:
-<img src="Images/Home.png" alt="Home" width="350" height="600"/>
+
+
+<img src="Images/Home.png" alt="Home" width="450" height="600"/>
+
+
+From here the user can:
++ Select an Employee to Delete or Update
++ Add an Employee
++ Delete All Employees
+
+To Add an Employee the user can Click the "Add Employee" Button or click the "+" on the command bar as shown:
+
+
+<img src="Images/AddEmployee.png" alt="Home" width="450" height="600"/>
+
 
 ## Database
 I designed the database to contain anything that an employer may want to store about their employee’s, such as name, age and contact details.
