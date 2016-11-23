@@ -46,7 +46,7 @@ The user can delete all employee's from the database using the "Delete All" Butt
 <img src="Images/DeleteAll.png" alt="Go Home" width="450" height="600"/>
 
 
-Finally, the user can select a user as shown below, this will bring them to the delete or update view.
+Finally, the user can select an employee as shown below, this will bring them to the delete or update view.
 
 
 <img src="Images/SelectUser.png" alt="Go Home" width="450" height="600"/>
