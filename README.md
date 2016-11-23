@@ -24,7 +24,38 @@ From here the user can:
 To Add an Employee the user can Click the "Add Employee" Button or click the "+" on the command bar as shown:
 
 
-<img src="Images/AddEmployee.png" alt="Home" width="450" height="600"/>
+<img src="Images/AddEmployee.png" alt="Add Employee" width="450" height="600"/>
+
+
+This will bring the user to the add employee view shown below,
+Where they can fill out the employee's details and add them to the database using the button.
+
+
+<img src="Images/AddEmployeePage.png" alt="AddEmployeeView" width="450" height="600"/>
+
+
+The user can also navigate back to the home page from any page using the home icon displayed in the command bar:
+
+
+<img src="Images/NavHome.png" alt="Go Home" width="450" height="600"/>
+
+
+The user can delete all employee's from the database using the "Delete All" Button or the "X" button in the command bar as shown:
+
+
+<img src="Images/DeleteAll.png" alt="Go Home" width="450" height="600"/>
+
+
+Finally, the user can select a user as shown below, this will bring them to the delete or update view.
+
+
+<img src="Images/SelectUser.png" alt="Go Home" width="450" height="600"/>
+
+
+The user can then update the employee's details in the text box's and click the "Update" Button or delete that employee by clicking the "Delete" Button as shown:
+
+
+<img src="Images/DelUpdate.png" alt="Go Home" width="450" height="600"/>
 
 
 ## Database
