@@ -9,6 +9,15 @@ This project uses various things I learned from the labs such as MVVM, SQLite, O
 The files 'SQLite.cs' and 'SQLiteAsync.cs' are publicly available files that I used to create this project. I found them at the following link:  
 [SQLite Files](https://github.com/praeclarum/sqlite-net)
 
+##Technologies Used
+I have used the following list of technologies from the labs in this project
++ UWP (Universal Windows Platform)
++ MVVM(Model View View Model)
++ SQLite database
++ Observable Collection
++ Lambda
++ Async - Await
+
 ##How to use the Application
 The following page will be displayed when the user starts the application:
 
